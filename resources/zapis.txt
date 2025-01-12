@@ -1,0 +1,4 @@
+Sally:2008-01-13:Hluk:69
+Andy:2007-12-29:Uherské Hradiště:7
+Karel Dvořák:2005-12-31:Uherské Hradiště:45
+Nikolas Emouš:2008-01-18:Uherské Hradiště:1
