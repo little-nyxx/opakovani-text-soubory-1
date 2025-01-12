@@ -56,11 +56,28 @@ public class EvidenceZakazniku {
         return new Zakaznik(datumNarozeni, jmeno, mesto, pocetProdeju);
 
     }
-
-    public List<Zakaznik> zaznamLimit(Zakaznik zakaznik) throws EvidenceExeption {
-        if(zakaznik.getPocetProdeju() > 20) {
-            return List<Zakaznik>;
+    public List<Zakaznik> vyber = new ArrayList<>();
+    public void zaznamLimit() throws EvidenceExeption {
+        for (Zakaznik zakaznik : evidence) {
+            if (zakaznik.getPocetProdeju() > 20) {
+                vyber.add(zakaznik);
+            }
         }
+    }
+    public int prumerProdejuUH() {
+        int pocetLidi = 0;
+        int pocetProdeju = 0;
+        for(Zakaznik zakaznik : evidence) {
+            if (zakaznik.getMesto().equals("Uherské Hradiště")){
+                pocetLidi ++;
+                pocetProdeju += zakaznik.getPocetProdeju();
+            }
+        }
+        int prumer = 0;
+        if (pocetLidi != 0) {
+            prumer = pocetProdeju/pocetLidi;
+        }
+        return prumer;
     }
 
 

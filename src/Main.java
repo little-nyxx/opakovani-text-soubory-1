@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Objects;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -16,8 +18,16 @@ public class Main {
         evidenceZakazniku.zapisZakazniky("zapis.txt", ":");
         //evidenceZakazniku.prectiSoubor("pridavani.txt", ":");
         evidenceZakazniku.evidence.removeLast();
+        System.out.println("Jména všech zákazníků, kromě posledního");
         for (Zakaznik zakaznik : evidenceZakazniku.evidence){
            System.out.println(zakaznik.getJmeno());
+        }
+        System.out.println("Průměrný počet prodejů v Uherském Hradišti");
+        System.out.println(evidenceZakazniku.prumerProdejuUH());
+        evidenceZakazniku.zaznamLimit();
+        System.out.println("Zákazníci s počtem prodejů nad 20");
+        for (Zakaznik zakaznik : evidenceZakazniku.vyber){
+            System.out.println(zakaznik.getJmeno() + " " +zakaznik.getPocetProdeju());
         }
 
     }
